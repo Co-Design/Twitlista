@@ -40,7 +40,11 @@ $lista_municipios_count = '';
 while ($row = mysql_fetch_assoc($resm)) {
       mysql_data_seek($resi, $row['mun_id'] - 1);
       $list = mysql_fetch_assoc($resi);
-      $lista_municipios_count .= '<li><a href="/municipio/' .$row['mun_id'] .'/">' . $list['nombre'] .'(' . $row['COUNT(*)'] .')</a></li>';
+      $array_municipios_count[] = '<li><a href="/municipio/' .$row['mun_id'] .'/">' . $list['nombre'] .'(' . $row['COUNT(*)'] .')</a></li>';
+}
+array_rand($array_municipios_count, 10);
+foreach ($array_municipios_count as $id){
+	$lista_municipios_count .= $array_municipios_count[$id];
 }
 $page->assign('municipios_contador',  $lista_municipios_count);
 
