@@ -21,7 +21,7 @@ $page->assign('img_url', $row['img_url']);
 $page->assign('nombre', $row['name']);
 $page->assign('username', $row['username']);
 $timestampDiff = time()-$row['timestamp'];
-$page->assign('fecha', $timestampDiff/60);
+$page->assign('fecha', number_format($timestampDiff/60, 0));
 
 
 $query = "SELECT *
