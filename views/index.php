@@ -37,13 +37,15 @@ FROM gente
 GROUP BY mun_id";
 $resm = executeQuery( $query);
 $lista_municipios_count = '';
+$array_municipios_count = array();
+$i = 0;
 while ($row = mysql_fetch_assoc($resm)) {
       mysql_data_seek($resi, $row['mun_id'] - 1);
       $list = mysql_fetch_assoc($resi);
-      $array_municipios_count[] = '<li><a href="/municipio/' .$row['mun_id'] .'/">' . $list['nombre'] .'(' . $row['COUNT(*)'] .')</a></li>';
+      $array_municipios_count[$i++] = '<li><a href="/municipio/' .$row['mun_id'] .'/">' . $list['nombre'] .'(' . $row['COUNT(*)'] .')</a></li>';
 }
-array_rand($array_municipios_count, 10);
-foreach ($array_municipios_count as $id){
+$array_municipios_rand =array_rand($array_municipios_count, 2);
+foreach ($array_municipios_rand as $id){
 	$lista_municipios_count .= $array_municipios_count[$id];
 }
 $page->assign('municipios_contador',  $lista_municipios_count);
