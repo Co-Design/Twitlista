@@ -44,6 +44,10 @@ require_once(_DIR_LIB . 'twitteroauth/twitteroauth.php');
  */
 include_once (_DIR_LIB . 'class.quickskin.php');
 
+
+/**
+ * app Dispacther
+ */
 $url_request = split('/' , $_SERVER['REQUEST_URI']);
 $action = strtolower($url_request[1]);
 switch ($action) {
