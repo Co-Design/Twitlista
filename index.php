@@ -1,5 +1,6 @@
 <?php
 error_reporting(E_ALL);
+//testing my commits
 /**
  * A 'small' description
  * 
