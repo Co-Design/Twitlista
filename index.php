@@ -1,23 +1,48 @@
 <?php
 error_reporting(E_ALL);
 /**
- * A 'small' description
+ * General Manager and dispatcher for the app
  * 
- * a 'full'description
- * multilene is cool
- * and big number is more cool
+ * load all require libraries to app execution
+ * and make a "small" distpacher whit load, the app run. 
  * @author Jesus Christian Cruz Acono <devel@compermisosnetwork.info>
- * @version 0.0.1
- * @package sample
+ * @version 0.0.2
+ * @package Twitlista
 */
 /**
- * general confi values
+ * general config values
  */
-require_once 'config.php';
-include_once 'db_manager.php';
-include_once (_PATH_HOME .'lib/class.quickskin.php');
-include_once 'twitter_api.php';
-require_once('lib/twitteroauth/twitteroauth.php');
+require_once (_DIR_SITE . 'config.php');
+
+
+/**
+ * Proyect libs
+ */
+ 
+ 
+/**
+ * Load the internal DB Manager.
+ */
+include_once (_DIR_SITE . 'db_manager.php');
+
+/**
+ * load Twitter api implementation for the proyect
+ */
+include_once (_DIR_SITE . 'twitter_api.php');
+
+
+/**
+ * 3rd party libs
+ */
+
+/**
+ * load Twitter Api Lib (external provider)
+ */
+require_once(_DIR_LIB . 'twitteroauth/twitteroauth.php');
+/**
+ * Load the skin template.
+ */
+include_once (_DIR_LIB . 'class.quickskin.php');
 
 $url_request = split('/' , $_SERVER['REQUEST_URI']);
 $action = strtolower($url_request[1]);
