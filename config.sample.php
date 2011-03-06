@@ -35,18 +35,20 @@ if (!defined('_URL_HOME')) {
   }
 }
 
-if (!defined('_DIR_LIB'))  { define('_DIR_LIB',  _DIR_SITE . 'lib/); }
+
 
 
 // define the paths and URLs of the application
-if (!defined('_PATH_HOME'))  { define('_PATH_HOME',  $dirTmp . "/"); }
+if (!defined('_PATH_HOME'))  { 
+	define('_PATH_HOME',  $dirTmp . "/"); 
+}
 if (!defined('_PATH_SKINS')) { define('_PATH_SKINS', _PATH_HOME . "_skins/"); }
 if (!defined('_URL_SKINS'))  { define('_URL_SKINS',  _URL_HOME . "_skins/"); }
 if (!defined('_PREF_TPL'))   { define('_PREF_TPL',   "default/"); }
 if (!defined('_URL_USRIMG')) { define('_URL_USRIMG', _URL_SKINS . _PREF_TPL . "tplimgs/"); }
 if (!defined('_URL_USRCSS')) { define('_URL_USRCSS', _URL_SKINS . _PREF_TPL . "tplcss/"); }
 if (!defined('_URL_USRJS'))  { define('_URL_USRJS',  _URL_SKINS . _PREF_TPL . "tpljs/"); }
+if (!defined('_DIR_LIB'))  { define('_DIR_LIB',  _PATH_HOME . 'lib/); }
 
-
-define(LOCALE_DIR, _DIR_SITE .'/locale');
+define(LOCALE_DIR, _PATH_HOME .'/locale');
 define(DEFAULT_LOCALE, 'es_MX');

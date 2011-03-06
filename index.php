@@ -12,7 +12,7 @@ error_reporting(E_ALL);
 /**
  * general config values
  */
-require_once (_DIR_SITE . 'config.php');
+require_once (_PATH_HOME . 'config.php');
 
 
 /**
@@ -23,12 +23,12 @@ require_once (_DIR_SITE . 'config.php');
 /**
  * Load the internal DB Manager.
  */
-include_once (_DIR_SITE . 'db_manager.php');
+include_once (_PATH_HOME . 'db_manager.php');
 
 /**
  * load Twitter api implementation for the proyect
  */
-include_once (_DIR_SITE . 'twitter_api.php');
+include_once (_PATH_HOME . 'twitter_api.php');
 
 
 /**
