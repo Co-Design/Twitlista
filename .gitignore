@@ -3,5 +3,5 @@ config.php
 *~
 _skins_tmp/*
 */Thumbs.db
-images/municipios/*
+images/municipios/*.jpg
 *.psd
