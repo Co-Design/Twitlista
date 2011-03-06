@@ -1,5 +1,6 @@
 <?php
 error_reporting(E_ALL);
+//testing my commits
 /**
  * General Manager and dispatcher for the app
  * 
