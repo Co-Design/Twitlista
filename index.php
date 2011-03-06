@@ -12,7 +12,7 @@ error_reporting(E_ALL);
 /**
  * general config values
  */
-require_once (_PATH_HOME . 'config.php');
+require_once ('config.php');
 
 
 /**
