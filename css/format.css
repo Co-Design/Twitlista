@@ -1,0 +1,25 @@
+body { background: #eee; 
+	color:		#5E656E; font-family: Segoe UI,Tahoma,Verdana,Arial; font-size: .8em;
+	margin:		0; padding: 0;
+	}
+h1 { font-size: 2.0em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: 1em; }
+h6 { font-size: .8em; }
+strong { font-weight: bold; }
+p { line-height: 1.4em; margin: 5px 0; padding: 5px; }
+a { text-decoration: none; }
+
+/*navigation menu*/
+#nav { position: absolute; right: 20px; top: 15px;}
+	#nav li { display: block; float: left; margin: 0 5px;}
+		#nav li a { display: block;  float: left; margin: 0; padding: 3px 15px; }
+		#nav li a:hover, #nav li .current { 
+			-moz-border-radius: 15px;
+			-webkit-border-radius: 15px;
+			border-radius: 15px;
+		}
+		#nav li a:hover { background: #fff;}
+		#nav li .current { background: #fff;}

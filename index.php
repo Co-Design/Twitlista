@@ -1,6 +1,5 @@
 <?php
 error_reporting(E_ALL);
-//testing my commits
 /**
  * A 'small' description
  * 
@@ -31,6 +30,9 @@ case 'gente':
 	break;
 case 'mapa':
     include_once(_PATH_HOME . 'views/mapa.php');
+    break;
+case 'municipios':
+    include_once(_PATH_HOME . 'views/municipios.php');
     break;
 default:
 	include_once(_PATH_HOME . 'views/index.php');

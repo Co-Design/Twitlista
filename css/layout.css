@@ -1,0 +1,71 @@
+/*layout*/
+.wrapper { margin: 0; padding: 10px 0; border-top: 1px solid #fff; border-bottom: 1px solid #ccc; position: relative; }
+#top {
+	background: url(../images/middle_bg.png) 0 -100px repeat-x #C0DEED;
+	height: 30px; border: none;}
+#middle {
+	background: url(../images/middle_bg2.png) 0 0 repeat-x #C0DEED;
+	height: auto !important; min-height: 320px; height: 320px; }
+#bottom {
+	background: #f1f1f1;
+	border-bottom: none;
+	height:		100%; min-height: 150px; height: 150px;
+	}
+/*panels layout*/	
+#panels { text-align: center; width: 870px; margin: 0 auto; -moz-border-radius: 10px; }
+.panel {
+	background:	url(../images/bg_panel.png) left bottom repeat-x #fff;
+	border:		1px solid #C3DFEE;
+	display:	inline-block;
+	height:		150px; width: 250px;
+	margin:		10px; padding: 5px;
+	position:	relative;
+	text-align: justify;
+	}
+.panel p { margin-top: 25px; }
+.panel-title {
+	background:	#7CD8F3;
+	display:	block;
+	font-size:	1.2em;
+	padding:	5px;
+	position: absolute; left:-10px;
+	width: 150px;
+}
+.clear { clear:both; }
+
+/*slider layout*/
+#slider-wrapper {
+	background:	url(../images/slider.png) 0 -30px no-repeat;
+	height:		300px; width:998px;
+    margin:		0 auto; padding-top: 44px; margin-top:0px;
+}
+#slider {
+	background:		url(../images/loading.gif) no-repeat 50% 50%;
+	height:			246px; width:618px;
+    margin-left:	190px;
+	position:		relative;
+}
+#slider img { display:none; position: absolute; top:0px; left:0px; }
+#slider a { border:0; display:block; }
+.nivo-controlNav { position:absolute; left:190px; bottom:-42px; }
+.nivo-controlNav a {
+	background:	url(../images/bullets.png) no-repeat;
+	border:		0;
+	display:	block;
+	float:		left;
+	height:		22px; width:22px;
+	margin-right:3px;
+	text-indent:-9999px;
+}
+.nivo-controlNav a.active { background-position:0 -22px; }
+.nivo-directionNav a {
+	background:	url(../images/arrows.png) no-repeat;
+	border:		0;
+	display:	block;
+	height:		30px; width:30px;
+	text-indent:-9999px;
+}
+a.nivo-nextNav { background-position:-30px 0; right:15px; }
+a.nivo-prevNav { left:15px; }
+.nivo-caption { text-shadow:none; font-family: Helvetica, Arial, sans-serif; }
+.nivo-caption a { color:#efe9d1; text-decoration:underline; }
