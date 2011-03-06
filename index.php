@@ -12,7 +12,7 @@ error_reporting(E_ALL);
 /**
  * general config values
  */
-require_once ('config.php');
+require_once('config.php');
 
 
 /**
@@ -23,13 +23,12 @@ require_once ('config.php');
 /**
  * Load the internal DB Manager.
  */
-include_once (_PATH_HOME . 'db_manager.php');
+include_once(_PATH_HOME . 'db_manager.php');
 
 /**
  * load Twitter api implementation for the proyect
  */
-include_once (_PATH_HOME . 'twitter_api.php');
-
+include_once(_PATH_HOME . 'twitter_api.php');
 
 /**
  * 3rd party libs
@@ -39,11 +38,11 @@ include_once (_PATH_HOME . 'twitter_api.php');
  * load Twitter Api Lib (external provider)
  */
 require_once(_DIR_LIB . 'twitteroauth/twitteroauth.php');
+
 /**
  * Load the skin template.
  */
-include_once (_DIR_LIB . 'class.quickskin.php');
-
+include_once(_DIR_LIB . 'class.quickskin.php');
 
 /**
  * app Dispacther

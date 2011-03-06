@@ -12,7 +12,6 @@ $page->assign('url_js',      _URL_USRJS);
 $page->assign('tpl_css',     'tplcss/');
 $page->assign('url_css',     _URL_USRCSS);
 
-
 $query = "SELECT COUNT(*) FROM gente";
 $res = executeQuery( $query);
 $data = mysql_fetch_assoc($res);
@@ -63,5 +62,6 @@ foreach ($array_municipios_rand as $id){
 }
 $page->assign('municipios_contador',  $lista_municipios_count);
 */
+echo "run";
 $page->assign('page_title', 'Home');
 $page->output();
