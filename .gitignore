@@ -2,3 +2,6 @@ config.php
 .htaccess
 *~
 _skin_tmp/*
+*/Thumbs.db
+images/municipios/*
+*.psd
