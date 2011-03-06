@@ -47,7 +47,7 @@ include_once(_DIR_LIB . 'class.quickskin.php');
 /**
  * app Dispacther
  */
-$url_request = split('/' , $_SERVER['REQUEST_URI']);
+$url_request = preg_split('//' , $_SERVER['REQUEST_URI']);
 $action = strtolower($url_request[1]);
 switch ($action) {
 case 'municipio':
