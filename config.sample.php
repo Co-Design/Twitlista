@@ -48,7 +48,7 @@ if (!defined('_PREF_TPL'))   { define('_PREF_TPL',   "default/"); }
 if (!defined('_URL_USRIMG')) { define('_URL_USRIMG', _URL_SKINS . _PREF_TPL . "tplimgs/"); }
 if (!defined('_URL_USRCSS')) { define('_URL_USRCSS', _URL_SKINS . _PREF_TPL . "tplcss/"); }
 if (!defined('_URL_USRJS'))  { define('_URL_USRJS',  _URL_SKINS . _PREF_TPL . "tpljs/"); }
-if (!defined('_DIR_LIB'))  { define('_DIR_LIB',  _PATH_HOME . 'lib/); }
+if (!defined('_DIR_LIB'))  { define('_DIR_LIB',  _PATH_HOME . 'lib/'); }
 
 define(LOCALE_DIR, _PATH_HOME .'/locale');
 define(DEFAULT_LOCALE, 'es_MX');
