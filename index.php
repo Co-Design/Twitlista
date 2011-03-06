@@ -1,6 +1,5 @@
 <?php
 error_reporting(E_ALL);
-//testing my commits
 /**
  * General Manager and dispatcher for the app
  * 
@@ -60,6 +59,9 @@ case 'gente':
 	break;
 case 'mapa':
     include_once(_PATH_HOME . 'views/mapa.php');
+    break;
+case 'municipios':
+    include_once(_PATH_HOME . 'views/municipios.php');
     break;
 default:
 	include_once(_PATH_HOME . 'views/index.php');
