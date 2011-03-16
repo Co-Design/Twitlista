@@ -6,7 +6,7 @@ function update_registro($id){
 	$row = mysql_fetch_assoc($res);
 	$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $row['token'], $row['token_secret']);
 	$content = $connection->get('account/verify_credentials');
-	$query_insert = "UPDATE `Compermisos`.`gente` SET 
+	$query_insert = "UPDATE `" . MYSQL_DB . "`.`gente` SET 
 	`username` = '" . $content->screen_name . "',
 	`name` = '" . $content->name . "'," .
 	"`img_url` = '" . $content->profile_image_url . "',".
