@@ -47,13 +47,15 @@ require_once(_DIR_LIB . 'class.quickskin.php');
 /**
  * Load the log manager.
  */
-require_once(LOG4PHP_DIR . 'LoggerManager.php');
+require_once(LOG4PHP_DIR . 'Logger.php');
 
 
 /**
  *start the logger manager
  */
-$logger =& LoggerManager::getLogger('main');
+Logger::configure(LOG4PHP_CONFIG_DIR . LOG4PHP_APPENDER);
+
+$logger = Logger::getRootLogger();
 $logger->info('Twitlista now run ');
 
 /**

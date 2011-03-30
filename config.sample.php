@@ -15,7 +15,9 @@ define('MYSQL_USER', 'eaeaeaae');
 define('MYSQL_PASSWD', 'eaeaeeaea');
 define('MYSQL_DB', 'eaaeaee');
 
-
+if (!defined('LOG4PHP_APPENDER'))  { 
+	define('LOG4PHP_APPENDER', 'appender_php.properties');
+} 
 
 //stop the normal changeable values
 $dirTmp = getcwd();
@@ -62,6 +64,9 @@ if (!defined('_URL_USRJS'))  {
 if (!defined('_DIR_LIB'))  { 
 	define('_DIR_LIB',  _PATH_HOME . 'lib/'); 
 }
+if (!defined('_CONFIG_DIR'))  { 
+	define('_CONFIG_DIR', _PATH_HOME .'config/');
+} 
 
 if (!defined('LOCALE_DIR'))  { 
 	define('LOCALE_DIR', _PATH_HOME .'/locale');
@@ -72,4 +77,8 @@ if (!defined('DEFAULT_LOCALE'))  {
 
 if (!defined('LOG4PHP_DIR'))  { 
 	define('LOG4PHP_DIR', _DIR_LIB .'log4php/');
+} 
+
+if (!defined('LOG4PHP_CONFIG_DIR'))  { 
+	define('LOG4PHP_CONFIG_DIR', _CONFIG_DIR .'log4php/');
 } 
