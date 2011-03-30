@@ -40,29 +40,47 @@ include_once(_PATH_HOME . 'twitter_api.php');
 require_once(_DIR_LIB . 'twitteroauth/twitteroauth.php');
 
 /**
- * Load the skin template.
+ * Load the skin manager.
  */
-include_once(_DIR_LIB . 'class.quickskin.php');
+require_once(_DIR_LIB . 'class.quickskin.php');
+
+/**
+ * Load the log manager.
+ */
+require_once(LOG4PHP_DIR . 'LoggerManager.php');
+
+
+/**
+ *start the logger manager
+ */
+$logger =& LoggerManager::getLogger('main');
+$logger->info('Twitlista now run ');
 
 /**
  * app Dispacther
  */
 $url_request = preg_split('//' , $_SERVER['REQUEST_URI']);
 $action = strtolower($url_request[1]);
+$logger->debug('called ' . $action);
+
 switch ($action) {
 case 'municipio':
+	$logger->info('load municipio');
 	include_once(_PATH_HOME . 'views/municipio.php');
 	break;
 case 'gente':
+	$logger->info('load gente');
 	include_once(_PATH_HOME . 'views/gente.php');
 	break;
 case 'mapa':
+    $logger->info('load mapa');
     include_once(_PATH_HOME . 'views/mapa.php');
     break;
 case 'municipios':
+    $logger->info('load municipios');
     include_once(_PATH_HOME . 'views/municipios.php');
     break;
 default:
+	$logger->info('load index');
 	include_once(_PATH_HOME . 'views/index.php');
 }
-?>

@@ -17,6 +17,7 @@ define('MYSQL_DB', 'eaaeaee');
 
 
 
+//stop the normal changeable values
 $dirTmp = getcwd();
 // define the "root" directory of the application
 if (!defined('_DIR_SITE')) {
@@ -35,20 +36,40 @@ if (!defined('_URL_HOME')) {
   }
 }
 
-
-
-
 // define the paths and URLs of the application
 if (!defined('_PATH_HOME'))  { 
 	define('_PATH_HOME',  $dirTmp . "/"); 
 }
-if (!defined('_PATH_SKINS')) { define('_PATH_SKINS', _PATH_HOME . "_skins/"); }
-if (!defined('_URL_SKINS'))  { define('_URL_SKINS',  _URL_HOME . "_skins/"); }
-if (!defined('_PREF_TPL'))   { define('_PREF_TPL',   "default/"); }
-if (!defined('_URL_USRIMG')) { define('_URL_USRIMG', _URL_SKINS . _PREF_TPL . "tplimgs/"); }
-if (!defined('_URL_USRCSS')) { define('_URL_USRCSS', _URL_SKINS . _PREF_TPL . "tplcss/"); }
-if (!defined('_URL_USRJS'))  { define('_URL_USRJS',  _URL_SKINS . _PREF_TPL . "tpljs/"); }
-if (!defined('_DIR_LIB'))  { define('_DIR_LIB',  _PATH_HOME . 'lib/'); }
+//the skins dir
+if (!defined('_PATH_SKINS')) {
+	define('_PATH_SKINS', _PATH_HOME . "_skins/");
+}
+if (!defined('_URL_SKINS'))  { 
+	define('_URL_SKINS',  _URL_HOME . "_skins/"); 
+}
+if (!defined('_PREF_TPL'))   { 
+	define('_PREF_TPL',   "default/"); 
+}
+if (!defined('_URL_USRIMG')) { 
+	define('_URL_USRIMG', _URL_SKINS . _PREF_TPL . "tplimgs/"); 
+}
+if (!defined('_URL_USRCSS')) { 
+	define('_URL_USRCSS', _URL_SKINS . _PREF_TPL . "tplcss/"); 
+}
+if (!defined('_URL_USRJS'))  { 
+	define('_URL_USRJS',  _URL_SKINS . _PREF_TPL . "tpljs/"); 
+}
+if (!defined('_DIR_LIB'))  { 
+	define('_DIR_LIB',  _PATH_HOME . 'lib/'); 
+}
 
-define('LOCALE_DIR', _PATH_HOME .'/locale');
-define('DEFAULT_LOCALE', 'es_MX');
+if (!defined('LOCALE_DIR'))  { 
+	define('LOCALE_DIR', _PATH_HOME .'/locale');
+}
+if (!defined('DEFAULT_LOCALE'))  { 
+	define('DEFAULT_LOCALE', 'es_MX');
+}
+
+if (!defined('LOG4PHP_DIR'))  { 
+	define('LOG4PHP_DIR', _DIR_LIB .'log4php/');
+} 
