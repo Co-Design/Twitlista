@@ -30,14 +30,18 @@ if (!defined('_DIR_SITE')) {
   }
 }
 // define the "root" URL of the application
-if (!defined('_URL_HOME')) {
+/*if (!defined('_URL_HOME')) {
   if ( strlen( substr($dirTmp,strlen($_SERVER['DOCUMENT_ROOT']) + 1) ) > 0 ) {
     define('_URL_HOME', "http://" . $_SERVER['HTTP_HOST'] . "/" . substr($dirTmp,strlen($_SERVER['DOCUMENT_ROOT']) + 1) . "/");
   } else {
     define('_URL_HOME', "http://" . $_SERVER['HTTP_HOST'] . "/");
   }
-}
+}*/
 
+if (!defined('_URL_HOME'))  { 
+	define('_URL_HOME',  'http://' . $_SERVER['HTTP_HOST'] . str_replace('index.php', '', $_SERVER['SCRIPT_NAME'])); 
+}
+echo _URL_HOME;
 // define the paths and URLs of the application
 if (!defined('_PATH_HOME'))  { 
 	define('_PATH_HOME',  $dirTmp . "/"); 
@@ -53,13 +57,13 @@ if (!defined('_PREF_TPL'))   {
 	define('_PREF_TPL',   "default/"); 
 }
 if (!defined('_URL_USRIMG')) { 
-	define('_URL_USRIMG', _URL_SKINS . _PREF_TPL . "tplimgs/"); 
+	define('_URL_USRIMG', _URL_HOME . "images/"); 
 }
 if (!defined('_URL_USRCSS')) { 
-	define('_URL_USRCSS', _URL_SKINS . _PREF_TPL . "tplcss/"); 
+	define('_URL_USRCSS', _URL_HOME . "css/"); 
 }
 if (!defined('_URL_USRJS'))  { 
-	define('_URL_USRJS',  _URL_SKINS . _PREF_TPL . "tpljs/"); 
+	define('_URL_USRJS',  _URL_HOME . "js/"); 
 }
 if (!defined('_DIR_LIB'))  { 
 	define('_DIR_LIB',  _PATH_HOME . 'lib/'); 

@@ -11,6 +11,7 @@ $page->assign('url_js',      _URL_USRJS);
 //do substitute of template CSS directory
 $page->assign('tpl_css',     'tplcss/');
 $page->assign('url_css',     _URL_USRCSS);
+$page->assign('url_home',     _URL_HOME);
 
 $query = "SELECT COUNT(*) FROM gente";
 $res = executeQuery( $query);
@@ -37,8 +38,8 @@ $municipios_random = array_rand($records, 10);
 $random_list = '';
 foreach ($records as $mun) {
 	if (in_array($mun['id'], $municipios_random)) {
-		$random_list .= '<a href="/municipio/' . $mun['id'] . '/">'
-						. '<img src="images/municipios/' . $mun['id'] . '.jpg" alt="' . htmlentities($mun['nombre'], ENT_QUOTES) . ': ' . htmlentities($mun['descripcion'], ENT_QUOTES) 
+		$random_list .= '<a href="'. _URL_HOME . 'municipio/' . $mun['id'] . '/">'
+						. '<img src="'. _URL_USRIMG . 'municipios/' . $mun['id'] . '.jpg" alt="' . htmlentities($mun['nombre'], ENT_QUOTES) . ': ' . htmlentities($mun['descripcion'], ENT_QUOTES) 
 						. '" title="' . htmlentities($mun['nombre'], ENT_QUOTES) .': ' . htmlentities($mun['descripcion'], ENT_QUOTES) . '" />'
 						. '</a>';
 	}
