@@ -16,9 +16,9 @@ One of the Co-design areas of bussines are the metrics analyst, and for anlyst t
 Requirements
 ------------
 -	PHP5.3
--+	curl (for twitter oauth)
---	Mysql Driver (in a future a DB driver only)
--	Mysql db (non dedicated!!!! accept prefix's)
++	curl (for twitter oauth)
++	Mysql Driver (in a future a DB driver only)
++	Mysql db (non dedicated!!!! accept prefix's)
 -	TMP Directory (costumisable!!)
 ###In a future offer suport to 
 -	Cache (optional!!!)
