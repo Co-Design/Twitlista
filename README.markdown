@@ -15,18 +15,18 @@ One of the Co-design areas of bussines are the metrics analyst, and for anlyst t
 
 Requirements
 ------------
-*PHP5.3
-**curl (for twitter oauth)
-**Mysql Driver (in a future a DB driver only)
-*Mysql db (non dedicated!!!! accept prefix's)
-TMP Directory (costumisable!!)
-In a future offer suport to 
-*Cache
-**PHP-APC
-**Memcache
-*DB
-**SQLLite
-**PostgresSQL
+-PHP5.3
+--curl (for twitter oauth)
+--Mysql Driver (in a future a DB driver only)
+-Mysql db (non dedicated!!!! accept prefix's)
+-MP Directory (costumisable!!)
+###In a future offer suport to 
+-Cache (optional!!!)
+--PHP-APC
+--Memcache
+-DB
+--SQLLite
+--PostgresSQL
 Install
 -------
 The instalation is Simple.
@@ -44,25 +44,25 @@ one of the develop instances are in subdir, and exist a bug in the rewrite rules
 
 Tanks
 -----
-*LOG4PHPproject by a Pretty Log Manager
-*TwitterOauth by a really pretty Twitter Api For PHP
-*QuickSkin By a prety and fast Template Manager
+-LOG4PHPproject by a Pretty Log Manager
+-TwitterOauth by a really pretty Twitter Api For PHP
+-QuickSkin By a prety and fast Template Manager
 
 Work In Progress
 ----------------
-*Rewrite the DB module
-**now Object Based
-**Cache Support
-*log all events
-*Template Rewrite
-**new areas
-**pretty design
+-Rewrite the DB module
+--now Object Based
+--Cache Support
+-log all events
+-Template Rewrite
+--new areas
+--pretty design
 
 Planed Work
 -----------
-*Add more data in user pages (Twtter Bio, twitter stats, etc)
-*Generate a graphics whit the statistical data.
-*Full unit Testing
+-Add more data in user pages (Twtter Bio, twitter stats, etc)
+-Generate a graphics whit the statistical data.
+-Full unit Testing
 
 Architectural Design
 --------------------
